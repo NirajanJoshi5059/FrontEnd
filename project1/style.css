@@ -7,3 +7,8 @@
     width: 100%!important;
     height: 450px;
 } */
+
+a{
+    text-decoration: none;
+    color: white;
+}
