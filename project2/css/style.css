@@ -47,3 +47,21 @@
         padding: 0 5%;
     }
 }
+
+/* container-fluid */
+
+/* destination-content */
+#destination-content{
+    margin-bottom: 30px;
+}
+
+/* footer */
+#foot{
+    background-image: url('images/testimonials.jpg');
+    background-color: rgba(70, 68, 68, 0.705);
+    font-size: 17px;
+}
+#foot a{
+    color: rgba(0, 0, 0, 0.822);
+    text-decoration: none;
+}
