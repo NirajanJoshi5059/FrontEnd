@@ -8,8 +8,6 @@ switch(day){
         console.log("6:45 am")
         break;
     case "Wednesday":
-        console.log("6 am")
-        break;
     case "Thursday":
         console.log("6 am")
         break;
@@ -22,6 +20,8 @@ switch(day){
     case "Sunday":
         console.log("6 am")
         break;
+    default:
+        console.log("Wrong Data")
 }
 
 console.log("1. Momo \n2. Chowmean \n3. Pasta \n4. Thukpa")
