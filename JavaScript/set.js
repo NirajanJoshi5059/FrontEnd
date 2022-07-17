@@ -19,7 +19,9 @@ console.log(set2)
 set2.forEach((n)=>{
     console.log(n)
 })
+console.log(set2.has(14))
 // Using for of
 for(let n of set2){
     console.log(n)
 }
+
