@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <select name="courses" id="course">
+            <option value="BIM">Bachelor of Information Management</option>
+            <option value="BSc.CSIT">Bachelor of Computer Science Information Technology</option>
+            <option value="BBM">Bachelor of Business Management</option>
+            <option value="BCA">Bachelor of Computer Application</option>
+        </select><br>
+        <button id="btn" onclick="fn1()">Click Me</button>
+    </form>
+</body>
+<script>
+    function fn1(){
+        let select=document.getElementById('course');
+        alert(select.options[select.selectedIndex].value);
+    }
+</script>
+</html>

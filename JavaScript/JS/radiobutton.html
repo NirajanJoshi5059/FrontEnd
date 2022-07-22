@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="radio" name="gender" id="rd1" value="Male">MALE <br>
+        <input type="radio" name="gender" id="rd2" value="Female">FEMALE <br>
+        <input type="radio" name="gender" id="rd3" value="Other">OTHER <br>
+        <button id="btn" onclick="validition()">Save</button>
+    </form>
+</body>
+
+<script>
+    function validition() {
+        var male = document.getElementById('rd1');
+        var female = document.getElementById('rd2');
+        var other = document.getElementById('rd3');
+
+        if (male.checked)
+            alert(male.value);
+        else if (female.checked)
+            alert(female.value);
+        else if(other.checked)
+            alert(other.value);
+        else
+            alert("Nothing Checked.")
+    }
+</script>
+
+</html>

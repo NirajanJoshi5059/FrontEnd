@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+    <p>Third Paragraph</p>
+    <p>Fourth Paragraph</p>
+    <input type="button" value="Save" onclick="fn1()">
+</body>
+<script>
+    function fn1() {
+        let ptag = document.getElementsByTagName("p");
+        ptag[0].style.fontStyle = "Italic";
+        ptag[1].style.fontWeight = "bold";
+        ptag[2].style.color = 'blue';
+
+        for (var i=0; i<ptag.length; i++) {
+            ptag[i].style.fontSize = 24;
+        }
+    }
+</script>
+
+</html>
