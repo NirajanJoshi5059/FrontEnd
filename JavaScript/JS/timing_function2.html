@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="start();" id="start">Start</button>
+    <h1 id="timer">Timer</h1>
+    <button onclick="pause();" id="pause">Pause</button>
+    <button onclick="stop();">Stop</button>
+</body>
+<script>
+    let ID = 0;
+    let second = 0;
+    let minutes = 0;
+    function time() {
+        if (second < 60) {
+            document.getElementById('timer').innerHTML = `${minutes} min ${second} sec`;
+        }
+        else {
+            minutes++;
+            second = 0;
+            document.getElementById('timer').innerHTML = `${minutes} min ${second} sec`;
+        }
+        second++;
+    }
+    function start() {
+       ID=window.setInterval(time, 1000);
+    }
+    function pause() {
+        window.clearInterval(ID);
+        document.getElementById('start').innerHTML = "Resume";
+    }
+    function stop(){
+        window.clearInterval(ID);
+        
+        document.getElementById('timer').innerHTML=`${minutes} min ${second} sec`;
+        second=0;
+        minutes=0;
+    }
+</script>
+
+</html>

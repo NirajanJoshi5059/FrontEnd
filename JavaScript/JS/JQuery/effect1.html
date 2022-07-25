@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>Effect 1 </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <button id="hidebtn">Hide</button>
+    <button id="showbtn">Show</button>
+    <button id="toggle">Toogle</button><br><br>
+    <button id="slideup">Slide Up</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="slidetoggle">Slide Toogle</button><br><br>
+    <button id="fadeout">Fade Out</button>
+    <button id="fadein">Fade In</button>
+    <button id="fadetoggle">Fade Toogle</button>
+
+
+    <p>This is first paragraph in p tag only.</p>
+    <p>This is second paragraph in p tag only.</p>
+    <div class="mydiv" id="firstdiv">
+        <p>This is first paragraph inside first div.</p>
+        <p>This is Second paragraph inside first div.</p>
+    </div>
+    <div class="mydiv" id="seconddiv">
+        <p>This is third paragraph inside second div.</p>
+        <p>This is fourth paragraph inside second div.</p>
+    </div>
+    <div class="mydiv" id="thirddiv">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>News Feed</li>
+            <li>Service</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>News Feed</li>
+            <li>Service</li>
+        </ul>
+    </div>
+
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $('#hidebtn').click(function () {
+            $('#firstdiv').hide();
+        });
+
+        $('#showbtn').click(function () {
+            $('#firstdiv').show();
+        });
+
+        $('#toggle').click(function () {
+            $('#firstdiv').toggle();
+        });
+
+        $('#slideup').click(su);
+        $('#slidedown').click(sd);
+        $('#slidetoggle').click(st);
+
+        
+        $('#fadeout').click(fo);
+        $('#fadein').click(fi);
+        $('#fadetoggle').click(function(){
+            $('#thirddiv').fadeToggle(2000);
+        });
+    });
+    function su() {
+        $("#seconddiv").slideUp();
+    }
+    function sd() {
+        $("#seconddiv").slideDown();
+    }
+    function st() {
+        $("#seconddiv").slideToggle();
+    }
+
+    function fi(){
+        $('#thirddiv').fadeIn('slow');
+    }
+    function fo(){
+        $('#thirddiv').fadeOut('fast');
+    }
+</script>
+
+</html>

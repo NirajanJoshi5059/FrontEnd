@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img onmouseover="onover()" onmouseout="onout()" id="img" src="images/destination_7.jpg" alt="logo..." width="300px">
+<br>
+    <button class="mouse" id="btn">Click Me</button>
+</body>
+<script>
+function onover() {
+    document.getElementById('img').src='images/destination_8.jpg'; 
+    document.getElementById('btn').style.backgroundColor='red';
+}
+function onout(){
+    document.getElementById('img').src='images/destination_7.jpg';
+    document.getElementById('btn').style.backgroundColor='white';
+}
+</script>
+</html>

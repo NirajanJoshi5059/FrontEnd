@@ -1,0 +1,38 @@
+<!-- text(), html(), attr(), css() -->
+
+<html>
+
+<head>
+    <title>DOM 1</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <button id="text1">Text()</button>
+    <button id="html1">Html()</button>
+    <button id="attr1">Attr()</button>
+    <button id="css1">Css()</button>
+    <div class="mydiv" id="firstdiv">
+        <p id="ptag" value="Demo Value">This is <b>first paragraph</b> inside <i>first div</i>.</p>
+    </div>
+
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $("#text1").click(function () {
+            $('#ptag').text('Hello World');
+        });
+        $("#html1").click(function () {
+            $('#ptag').html("This is <b>Demo Paragraph </b> for <tag>html</tag> tag.");
+        });
+        $("#attr1").click(function () {
+            alert($('#ptag').attr('value'));
+        });
+        $("#css1").click(function () {
+            alert($('#ptag').css('font-family'));
+        });
+    });
+</script>
+
+</html>

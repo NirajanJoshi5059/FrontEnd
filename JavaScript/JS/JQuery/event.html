@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <h2>Event In JQuery</h2>
+    <button id="fadeout">Fade Out</button>
+    <button id="fadein">Fade In</button>
+    <button id="hover">Fade Toogle</button>
+
+    <p>This is first paragraph in p tag only.</p>
+    <p>This is second paragraph in p tag only.</p>
+    <div class="mydiv" id="firstdiv">
+        <p>This is first paragraph inside first div.</p>
+        <p>This is Second paragraph inside first div.</p>
+    </div>
+    <div class="mydiv" id="seconddiv">
+        <p>This is third paragraph inside second div.</p>
+        <p>This is fourth paragraph inside second div.</p>
+    </div>
+    <div class="mydiv" id="thirddiv">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>News Feed</li>
+            <li>Service</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>News Feed</li>
+            <li>Service</li>
+        </ul>
+    </div>
+   
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#fadeout').mouseenter(fadeout);
+        $("#fadein").mouseleave(fadein);
+        $('#hover').hover(fadeout, fadein);
+
+        
+    });
+    function fadeout() {
+            $('#firstdiv').fadeOut();
+        }
+        function fadein() {
+            $('#firstdiv').fadeIn();
+        }
+
+</script>
+
+</html>

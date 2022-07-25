@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Effect 1 </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <button id="callback">Callback</button>
+    <button id="chaining">Chaining</button>
+
+    <div class="mydiv" id="firstdiv">
+        <p>This is first paragraph inside first div.</p>
+        <p>This is Second paragraph inside first div.</p>
+    </div>
+    <div class="mydiv" id="seconddiv">
+        <p>This is third paragraph inside second div.</p>
+        <p>This is fourth paragraph inside second div.</p>
+    </div>
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $("#callback").click(function () {
+            $('#firstdiv').fadeToggle(2000, function () {
+                alert("Callback Demo");
+            });
+
+        });
+        $('#chaining').click(function () {
+            $('#seconddiv').fadeOut(2000, fadeoutalert).fadeIn('fast', fadeinalert).slideUp(1000, slideupalert).slideDown(3000, slidedownalert);
+        });
+        function fadeoutalert() {
+            alert("Fade Out.");
+        }
+        function fadeinalert() {
+            alert("Fade In.");
+        }
+        function slideupalert() {
+            alert("Slide Up Alert.");
+        }
+        function slidedownalert() {
+            alert("Slide Down Alert.");
+        }
+    });
+</script>
+
+</html>

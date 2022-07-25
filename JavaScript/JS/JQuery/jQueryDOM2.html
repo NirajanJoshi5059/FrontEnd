@@ -1,0 +1,32 @@
+<!-- text(), html(), attr(), css() -->
+
+<html>
+
+<head>
+    <title>DOM 2 </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <button id="get">Get Value</button>
+    <button id="set">Set Value</button>
+    <div class="mydiv" id="firstdiv">
+        <p id="ptag" value="Demo Value">This is <b>first paragraph</b> inside <i>first div</i>.</p>
+    </div>
+
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+    // This can be done on attr() too.
+    $(document).ready(function () {
+        $("#get").click(function () {
+            alert($("#ptag").css('font-family') );
+        });
+
+        $("#set").click(function () {
+            $("#ptag").css('font-family', 'Arial');
+        });
+    });
+</script>
+
+</html>

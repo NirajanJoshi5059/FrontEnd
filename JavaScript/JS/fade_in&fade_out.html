@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="fadeOut();">Fade Out </button>
+    <img id="img1" src="images/destination_9.jpg" alt="Logo ... " width="300px">
+    <button onclick="fadeIn();" id="">Fade In</button>
+</body>
+<script>
+    let intervalId = 0;
+    let opacity = 0;
+    function fadeOut() {
+        intervalId = setInterval(hide, 20);
+    }
+    function hide() {
+        var img = document.getElementById("img1");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if (opacity > 0) {
+            opacity = opacity - 0.01;
+            img.style.opacity = opacity;
+        }
+        else {
+            clearInterval(intervalId);
+        }
+    }
+    function fadeIn() {
+        intervalId = setInterval(show, 20);
+    }
+    function show() {
+        var img = document.getElementById("img1");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if (opacity < 1) {
+            opacity = opacity + 0.01;
+            img.style.opacity = opacity;
+        }
+        else {
+            clearInterval(intervalId);
+        }
+    }
+</script>
+
+</html>

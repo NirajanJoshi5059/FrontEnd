@@ -1,0 +1,25 @@
+p{
+    color: royalblue;
+}
+div{
+    border: solid 1px darkcyan;
+    margin: 5px;
+}
+.cube{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    opacity: .5;
+    position: absolute;
+    text-align: center;
+    color: white;
+}
+.newdiv{
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+.extraft{
+    color: antiquewhite;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

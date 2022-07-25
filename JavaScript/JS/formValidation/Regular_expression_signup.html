@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-4">
+                <form action="home.html" onsubmit="return signupValidation()" class="row g-3 needs-validation"
+                    novalidate>
+                    <div class="col-md-6">
+                        <label for="firstname" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstname" value="">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="lastname" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastname" value="">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend">
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="validationCustom03" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="validationCustom03">
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="mobile" class="form-label">Mobile Number</label>
+                        <input type="tel" class="form-control" id="mobile">
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="telephone" class="form-label">Tel Number</label>
+                        <input type="tel" class="form-control" id="telephone">
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="validationCustom04" class="form-label">State</label>
+                        <select class="form-select" id="validationCustom04" required>
+                            <option selected disabled value="">Province</option>
+                            <option>Province 1</option>
+                            <option>Province 2</option>
+                            <option>Bagmati Province</option>
+                            <option>Gandaki Province</option>
+                            <option>Lumbini Province</option>
+                            <option>Karnali Province</option>
+                            <option>Sudurpaschim Province</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="zipcode" class="form-label">Zip</label>
+                        <input type="text" class="form-control" id="zipcode" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="signup.js"></script>
+
+</html>

@@ -1,0 +1,54 @@
+<!-- text(), html(), attr(), css() -->
+
+<html>
+
+<head>
+    <title>DOM 3 </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <button id="btn1">Append</button>
+    <button id="btn2">Prepend</button>
+    <button id="btn3">After</button>
+    <button id="btn4">Before</button>
+    <br><br>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button>
+
+    <div class="mydiv" id="firstdiv">
+        <p id="ptag" value="Demo Value">This is <b>first paragraph</b> inside <i>first div</i>.</p>
+        <p id="demo">This is demo Paragraph for remove function</p>
+    </div>
+
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+    // This can be done on attr() too.
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("#firstdiv").append("<p>This is 2nd paragraph in first div.</p>");
+        });
+        $("#btn2").click(function () {
+            $("#firstdiv").prepend("<p>This is prepend paragraph in first div.</p>");
+        });
+        $("#btn3").click(function () {
+            $("#firstdiv").after("<p>This is paragraph after first div.</p>");
+        });
+        $("#btn4").click(function () {
+            $("#firstdiv").before("<p>This is paragraph before first div.</p>");
+        });
+
+        // $("#btn5").click(function () {
+        //     $("#firstdiv").remove();
+        // });
+        $("#btn5").click(function () {
+            $("p").remove("#demo");
+        });
+        $("#btn6").click(function () {
+            $("#firstdiv").empty();
+        });
+    });
+</script>
+
+</html>

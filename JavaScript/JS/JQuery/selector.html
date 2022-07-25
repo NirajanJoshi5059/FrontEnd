@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Selector</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <p>This is first paragraph in p tag only.</p>
+    <p>This is second paragraph in p tag only.</p>
+    <div class="mydiv" id="firstdiv">
+        <p>This is first paragraph inside first div.</p>
+        <p>This is Second paragraph inside first div.</p>
+    </div>
+    <div class="mydiv" id="seconddiv">
+        <p>This is third paragraph inside second div.</p>
+        <p>This is fourth paragraph inside second div.</p>
+    </div>
+    <div class="mydiv" id="thirddiv">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>News Feed</li>
+            <li>Service</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>News Feed</li>
+            <li>Service</li>
+        </ul>
+    </div>
+    <button onclick="fn()" id="btn">Click Me</button>
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+function fn(){
+    // $('p').fadeToggle(500);
+    // $('.mydiv').fadeToggle();
+    // $("#firstdiv").fadeToggle();
+    // $('#firstdiv > p').fadeToggle();
+    // $('p:first').fadeToggle();
+    // $('li:even').fadeToggle();
+    $('#firstdiv,#seconddiv').fadeToggle();
+}
+</script>
+
+</html>

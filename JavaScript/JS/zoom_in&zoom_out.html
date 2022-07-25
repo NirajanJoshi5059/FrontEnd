@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Basic Animations Part 2 - scaling</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 bg-secondary text-center mt-5">
+                <img onmouseover="zoomin()" onmouseout="zoomout()" id="img1" src="images/destination_9.jpg"
+                    width="380" />
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+    var width = 380;
+    var difference = 2;
+    var intervalID = 0;
+    function zoomin() {
+        clearInterval(intervalID);
+        intervalID = setInterval(expand, 10);
+    }
+    function expand() {
+        if (width < 420) {
+            width = width + difference;
+            document.getElementById("img1").style.width = width;
+        }
+        else {
+            clearInterval(intervalID);
+        }
+
+    }
+    function zoomout() {
+        clearInterval(intervalID);
+        intervalID = setInterval(shrink, 10);
+    }
+    function shrink() {
+        if (width > 380) {
+            width = width - difference;
+            document.getElementById("img1").style.width = width;
+        }
+        else {
+            clearInterval(intervalID);
+        }
+
+    }
+
+</script>
+
+</html>
